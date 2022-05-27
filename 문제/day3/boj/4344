@@ -29,7 +29,7 @@ public class Main {
 			}
 			rate[i] = ((double)((count/a))*100);
 		}
-		DecimalFormat form = new DecimalFormat("0.000"); // DecimalFormat함수로 설정한 소수점 자리수를 설정
+		DecimalFormat form = new DecimalFormat("0.000"); // DecimalFormat함수로 설정한 소수점 자리수를 설정및 0
 		for(int i=0; i<loop; i++)
 		{
 			System.out.println(form.format(rate[i]) + "%"); // format함수로 설정한 자리수로 소수 포멧후 출력
