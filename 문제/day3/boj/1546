@@ -1,0 +1,26 @@
+import java.io.*;
+
+public class Main {
+	
+	public static double MAX = Integer.MIN_VALUE;
+
+	public static void main(String [] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int a = Integer.parseInt(br.readLine());
+		double [] point = new double[a];
+		String [] s = br.readLine().split(" ");
+		for(int i=0; i<a; i++)
+		{
+			point[i] = Integer.parseInt(s[i]);
+			MAX = Math.max(MAX, point[i]);
+		}
+		double sum = 0 ;
+		for(int i=0; i<a; i++)
+		{
+			point[i] = (point[i]/MAX)*100;
+			sum += point[i];
+		}
+		System.out.println(sum/a);
+	}
+}
