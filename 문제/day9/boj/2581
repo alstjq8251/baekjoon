@@ -19,7 +19,6 @@ public class Main {
 		{
 			al.add(i, true);
 		}
-		int count = 0;
 		for ( int i = 2; (i*i) <=second; i++)
 			if(al.get(i))
 				for(int j = (i*i); j<=second; j +=i) al.set(j, false);
